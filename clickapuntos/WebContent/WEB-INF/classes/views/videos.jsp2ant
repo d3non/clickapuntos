@@ -1,0 +1,615 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>videos</title>
+<script type="text/javascript" src="<%=request.getContextPath()%>/js/jquery.tools.min.js"></script>
+<script type="text/javascript" src=".<%=request.getContextPath()%>/js/jquery.selectbox-0.6.1.js"></script>
+<script src="<%=request.getContextPath()%>/js/jquery.prettyPhoto.js" type="text/javascript" charset="utf-8"></script>
+<link type="text/css" rel="stylesheet" href="<%=request.getContextPath()%>/css/clicka_videos.css"/>
+<link rel="stylesheet" href="<%=request.getContextPath()%>/css/prettyPhoto.css" type="text/css" />
+</head>
+
+<body>
+	<div class="container">
+    	<!-- INIT HEADER -->
+    	<div class="header">
+            <div class="header_user_bar">
+                <ul>
+                    <li><img src="<%=request.getContextPath()%>/images/icon_logout.png" alt="Salir" /> <a href="#">Salir</a></li>
+                    <li><img src="<%=request.getContextPath()%>/images/icon_users.png" alt="Perfil" /> <a href="#">Perfil</a></li>
+                    <li><img src="<%=request.getContextPath()%>/images/icon_points.png" alt="Puntos" /> <a href="#">5,421</a></li>
+                </ul>
+            </div>
+        	<div class="header_menu">
+            	<ul>
+                	<li><a href="#">INICIO</a></li>
+                    <li><a href="#">CONCURSOS</a></li>
+                    <li><a href="#">COMO FUNCIONA</a></li>
+                    <li><a href="#">ACERCA DE</a></li>
+                    <li><a href="#">CONTACTO</a></li>
+                </ul>
+            </div>
+            <div class="header_logo">
+            	<img src="../images/clicka_logo.jpg" alt="Click a Puntos" />
+            </div>
+        </div>
+    	<!-- END HEADER -->
+        
+        <!-- INIT SLIDER -->
+		<div class="navi"></div>
+        <div class="slider">
+            <div class="scrollable" id="chained">   
+                <div class="items">
+                    <div class="slider_item">
+                        <div class="slider_item_img">
+                            <img src="../images/slider_1.png" alt="slider" />
+                        </div>
+                        <div class="slider_item_button">
+                            <a href="#"><img src="../images/play.png" alt="Reproducir video" /></a>
+                            <a href="#"><img src="../images/participa.png" alt="Participa" /></a>
+                        </div>
+                    </div>
+                    <div class="slider_item">
+                        <div class="slider_item_img">
+                            <img src="../images/slider_1.png" alt="slider" />
+                        </div>
+                        <div class="slider_item_button">
+                            <a href="#"><img src="../images/play.png" alt="Reproducir video" /></a>
+                            <a href="#"><img src="../images/participa.png" alt="Participa" /></a>
+                        </div>
+                    </div>
+                    <div class="slider_item">
+                        <div class="slider_item_img">
+                            <img src="../images/slider_1.png" alt="slider" />
+                        </div>
+                        <div class="slider_item_button">
+                            <a href="#"><img src="../images/play.png" alt="Reproducir video" /></a>
+                            <a href="#"><img src="../images/participa.png" alt="Participa" /></a>
+                        </div>
+                    </div>
+                    <div class="slider_item">
+                        <div class="slider_item_img">
+                            <img src="../images/slider_1.png" alt="slider" />
+                        </div>
+                        <div class="slider_item_button">
+                            <a href="#"><img src="../images/play.png" alt="Reproducir video" /></a>
+                            <a href="#"><img src="../images/participa.png" alt="Participa" /></a>
+                        </div>
+                    </div>
+                    <div class="slider_item">
+                        <div class="slider_item_img">
+                            <img src="../images/slider_1.png" alt="slider" />
+                        </div>
+                        <div class="slider_item_button">
+                            <a href="#"><img src="../images/play.png" alt="Reproducir video" /></a>
+                            <a href="#"><img src="../images/participa.png" alt="Participa" /></a>
+                        </div>
+                    </div>
+                    <div class="slider_item">
+                        <div class="slider_item_img">
+                            <img src="../../images/slider_1.png" alt="slider" />
+                        </div>
+                        <div class="slider_item_button">
+                            <a href="#"><img src="images/play.png" alt="Reproducir video" /></a>
+                            <a href="#"><img src="../images/participa.png" alt="Participa" /></a>
+                        </div>
+                    </div>
+                    <div class="slider_item">
+                        <div class="slider_item_img">
+                            <img src="../images/slider_1.png" alt="slider" />
+                        </div>
+                        <div class="slider_item_button">
+                            <a href="#"><img src="../images/play.png" alt="Reproducir video" /></a>
+                            <a href="#"><img src="../images/participa.png" alt="Participa" /></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slider_title">
+                <a href="#" class="slider_next next"></a>
+                <a href="#" class="slider_prev prev"></a>
+                <h2>Gana un viaje a Aspen con Halls</h2>
+            </div>
+        </div>
+        <!-- END SLIDER -->
+        
+        <!-- INIT COLUMN LEFT -->
+        <div class="column_videos_left">
+           	<!-- INIT VIDEO CONTROLS -->
+        	<div class="video_filters">
+                <h2>Filtrar por</h2>
+                <div class="video_filters_buttons">
+                	<select name="video_filter" id="video_filters_select">
+                        <option value="00">Agrega un filtro</option>
+                        <option value="01">Videos tipo 1</option>
+                        <option value="02">Videos tipo 2</option>
+                        <option value="03">Videos tipo 3</option>
+                        <option value="04">Videos tipo 4</option>
+                        <option value="05">Videos tipo 5</option>
+                        <option value="06">Videos tipo 6</option>
+                        <option value="07">Videos tipo 7</option>
+                        <option value="08">Videos tipo 8</option>
+                    </select>
+                    <a href="#"><img src="images/button_concert.png" alt="Concert" /></a>
+                    <a href="#"><img src="images/button_ad.png" alt="Ad" /></a>
+                </div>
+            </div>
+           	<!-- END VIDEO CONTROLS -->
+            	
+        	<!-- INIT LIST VIDEO RESULTS -->
+        	<div class="video_filters_result">
+            	<div class="video_filters_item">
+                   	<div class="video_like">
+                    	<a href="#"></a>
+                    </div>
+                	<div class="video_filters_item_image_content" onmouseover="playVideoControl(1,true)" onmouseout="playVideoControl(1,false)">
+                    	<div class="video_filters_item_smoth_container" id="video1">
+                            <div class="video_filters_item_smoth"></div>
+                            <div class="video_filters_item_smoth_play">
+                            	<a href="http://trailers.apple.com/movies/disney/tronlegacy/tronlegacy-tsr1_r640s.mov?width=640&height=272" rel="prettyPhoto[movies]">
+                                    <img src="../images/play_cortinillas.png" alt="Daft punk en concierto" />
+                                </a>
+                            </div>
+                        </div>
+                        <div class="video_filters_item_image">
+							<img src="../images/video1.jpg" alt="Daft punk en concierto" />
+                        </div>
+                    </div>
+                    <div class="video_filters_item_content">
+                    	<div class="video_filters_item_content_title">
+                        	<div class="video_filters_item_content_part">
+	                        	<a href="#"><img src="../images/button_participa.png" alt="Participa" /></a>
+                            </div>
+                        	<h3>Daft punk en concierto</h3>
+                            <ul>
+                            	<li><img src="../images/icon_view.png" alt="View" /> 54 Reproducciones</li>
+                                <li><img src="../images/icon_points.png" alt="Points" /> 500 Puntos</li>
+                            </ul>
+                        </div>
+                        <div class="video_filters_item_content_news">
+                        	<p><a href="#">Ticketmaster</a> esta regalando 20 entradas para el concierto de Daft Punk en México, observa el video y participa.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="video_filters_item">
+                   	<div class="video_like">
+                    	<a href="#"></a>
+                    </div>
+                	<div class="video_filters_item_image_content" onmouseover="playVideoControl(2,true)" onmouseout="playVideoControl(2,false)">
+                    	<div class="video_filters_item_smoth_container" id="video2">
+                            <div class="video_filters_item_smoth"></div>
+                            <div class="video_filters_item_smoth_play">
+                                <a href="http://trailers.apple.com/movies/sony_pictures/karatekid/karatekid-tlr3_r640s.mov?width=640&height=304" rel="prettyPhoto[movies]">
+                                    <img src="../images/play_cortinillas.png" alt="Festival de Arte Digital" />
+                                </a>
+                            </div>
+                        </div>
+                        <div class="video_filters_item_image">
+                    		<img src="../images/video2.jpg" alt="Video 1" />
+                        </div>
+                    </div>
+                    <div class="video_filters_item_content">
+                    	<div class="video_filters_item_content_title">
+                        	<h3>Festival de Arte Digital</h3>
+                            <ul>
+                            	<li><img src="../images/icon_view.png" alt="View" /> 28 Reproducciones</li>
+                                <li><img src="../images/icon_points.png" alt="Points" /> 200 Puntos</li>
+                            </ul>
+                        </div>
+                        <div class="video_filters_item_content_news">
+                        	<p>Asiste este 22 de Septiembre al Festival de Arte Digital que <a href="#">CONACULTA</a> esta organizando y si quieres participar escribenos.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="video_filters_item">
+                   	<div class="video_like">
+                    	<a href="#"></a>
+                    </div>
+                	<div class="video_filters_item_image_content" onmouseover="playVideoControl(3,true)" onmouseout="playVideoControl(3,false)">
+                    	<div class="video_filters_item_smoth_container" id="video3">
+                            <div class="video_filters_item_smoth"></div>
+                            <div class="video_filters_item_smoth_play">
+                                <a href="http://trailers.apple.com/movies/paramount/shutterisland/shutterisland-tvspot1_r640s.mov?width=640&height=272" rel="prettyPhoto[movies]">
+                                	<img src="../images/play_cortinillas.png" alt="Audi esta regalando un iPod shuffle" />
+                                </a>
+                            </div>
+                        </div>
+                        <div class="video_filters_item_image">
+                    		<img src="../images/video3.jpg" alt="Video 1" />
+                        </div>
+                    </div>
+                    <div class="video_filters_item_content">
+                    	<div class="video_filters_item_content_title">
+                        	<div class="video_filters_item_content_part">
+	                        	<a href="#"><img src="images/button_participa.png" alt="Participa" /></a>
+                            </div>
+                        	<h3>Audi esta regalando un iPod shuffle</h3>
+                            <ul>
+                            	<li><img src="../images/icon_view.png" alt="View" /> 112 Reproducciones</li>
+                                <li><img src="../images/icon_points.png" alt="Points" /> 600 Puntos</li>
+                            </ul>
+                            
+                        </div>
+                        <div class="video_filters_item_content_news">
+                        	<p>¿Te gustaría ganar un iPod shuffle? <a href="#">Audi</a> tiene uno para tí, tan solo responde la trivia y podras ser el afortunado ganador.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="video_filters_item">
+                   	<div class="video_like">
+                    	<a href="#"></a>
+                    </div>
+                	<div class="video_filters_item_image_content" onmouseover="playVideoControl(4,true)" onmouseout="playVideoControl(4,false)">
+                    	<div class="video_filters_item_smoth_container" id="video4">
+                            <div class="video_filters_item_smoth"></div>
+                            <div class="video_filters_item_smoth_play">
+                            	<a href="http://trailers.apple.com/movies/disney/tronlegacy/tronlegacy-tsr1_r640s.mov?width=640&height=272" rel="prettyPhoto[movies]">
+                                    <img src="../images/play_cortinillas.png" alt="Gana un viaje a Aspen con Halls" />
+                                </a>
+                            </div>
+                        </div>
+                        <div class="video_filters_item_image">
+                    		<img src="../images/video4.jpg" alt="Video 1" />
+                        </div>
+                    </div>
+                    <div class="video_filters_item_content">
+                    	<div class="video_filters_item_content_title">
+                        	<div class="video_filters_item_content_part">
+	                        	<a href="#"><img src="../images/button_participa.png" alt="Participa" /></a>
+                            </div>
+                        	<h3>Gana un viaje a Aspen con Halls</h3>
+                            <ul>
+                            	<li><img src="../images/icon_view.png" alt="View" /> 337 Reproducciones</li>
+                                <li><img src="../images/icon_points.png" alt="Points" /> 300 Puntos</li>
+                            </ul>
+                            
+                        </div>
+                        <div class="video_filters_item_content_news">
+                        	<p><a href="#">HALLS</a> esta regalando un viaje a Aspen con todo incluido para ti y 2 amigos, consulta las bases y participa!.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="video_filters_item">
+                   	<div class="video_like">
+                    	<a href="#"></a>
+                    </div>
+                	<div class="video_filters_item_image_content" onmouseover="playVideoControl(5,true)" onmouseout="playVideoControl(5,false)">
+                    	<div class="video_filters_item_smoth_container" id="video5">
+                            <div class="video_filters_item_smoth"></div>
+                            <div class="video_filters_item_smoth_play">
+                                <a href="http://trailers.apple.com/movies/disney/tronlegacy/tronlegacy-tsr1_r640s.mov?width=640&height=272" rel="prettyPhoto[movies]">
+                                    <img src="../images/play_cortinillas.png" alt="Otro video sobre algo que va por aquí" />
+                                </a>
+                            </div>
+                        </div>
+                        <div class="video_filters_item_image">
+                    		<img src="../images/video5.jpg" alt="Video 1" />
+                        </div>
+                    </div>
+                    <div class="video_filters_item_content">
+                    	<div class="video_filters_item_content_title">
+                        	<h3>Otro video sobre algo que va por aquí</h3>
+                            <ul>
+                            	<li><img src="../images/icon_view.png" alt="View" /> 2,696 Reproducciones</li>
+                                <li><img src="../images/icon_points.png" alt="Points" /> 1,200 Puntos</li>
+                            </ul>
+                        </div>
+                        <div class="video_filters_item_content_news">
+                        	<p>Aqui va la descripcion del video y <a href="#">Este es un link</a> que lleva posiblemente a la pagina del patrocinador.</p>
+                        </div>
+                    </div>
+                </div>
+			</div>
+        	<!-- END LIST VIDEO RESULTS -->
+        </div>
+        <!-- END COLUMN LEFT -->
+
+        <!-- INIT COLUMN RIGHT -->
+        <div class="column_videos_right">
+        	<div class="video_top_five_buttons">
+            	<img src="../images/button_top_five.jpg" alt="Top5" onclick="topfiveControl('top1')" />
+            	<img src="../images/button_suggestions.jpg" alt="Sugerencias" onclick="topfiveControl('top2')" />
+            </div>
+        	<div class="video_top_five" id="top1">
+            	<div class="video_top_five_item">
+                   	<div class="video_top_five_like">
+                    	<a href="#"></a>
+                    </div>
+                	<div class="video_top_five_content" onmouseover="playVideoControl('Top1',true)" onmouseout="playVideoControl('Top1',false)">
+                    	<div class="video_top_five_smoth_container" id="videoTop1">
+                            <div class="video_top_five_smoth"></div>
+                            <div class="video_top_five_smoth_play">
+                            	<a href="http://trailers.apple.com/movies/disney/tronlegacy/tronlegacy-tsr1_r640s.mov?width=640&height=272" rel="prettyPhoto[movies]">
+                                    <img src="../images/play_cortinillas.png" alt="Otro video sobre algo que va por aquí" />
+                                </a>
+                            </div>
+                        </div>
+                        <div class="video_top_five_image">
+                    		<img src="../images/video1.jpg" alt="Video 1" />
+                        </div>
+                    </div>
+                    <div class="video_top_five_text">
+                        <h3>Daft punk en concierto</h3>
+                        <ul>
+                            <li><img src="../images/icon_view.png" alt="View" /> 54</li>
+                            <li><img src="../images/icon_points.png" alt="Points" /> 500</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="video_top_five_item">
+                   	<div class="video_top_five_like">
+                    	<a href="#"></a>
+                    </div>
+                	<div class="video_top_five_content" onmouseover="playVideoControl('Top2',true)" onmouseout="playVideoControl('Top2',false)">
+                    	<div class="video_top_five_smoth_container" id="videoTop2">
+                            <div class="video_top_five_smoth"></div>
+                            <div class="video_top_five_smoth_play">
+                                <a href="http://trailers.apple.com/movies/disney/tronlegacy/tronlegacy-tsr1_r640s.mov?width=640&height=272" rel="prettyPhoto[movies]">
+                                    <img src="../images/play_cortinillas.png" alt="Otro video sobre algo que va por aquí" />
+                                </a>
+                            </div>
+                        </div>
+                        <div class="video_top_five_image">
+                    		<img src="../images/video2.jpg" alt="Video 2" />
+                        </div>
+                    </div>
+                    <div class="video_top_five_text">
+                        <h3>Festival de Arte Digital</h3>
+                        <ul>
+                            <li><img src="../images/icon_view.png" alt="View" /> 28</li>
+                            <li><img src="../images/icon_points.png" alt="Points" /> 200</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="video_top_five_item">
+                   	<div class="video_top_five_like">
+                    	<a href="#"></a>
+                    </div>
+                	<div class="video_top_five_content" onmouseover="playVideoControl('Top3',true)" onmouseout="playVideoControl('Top3',false)">
+                    	<div class="video_top_five_smoth_container" id="videoTop3">
+                            <div class="video_top_five_smoth"></div>
+                            <div class="video_top_five_smoth_play">
+                                <a href="http://trailers.apple.com/movies/disney/tronlegacy/tronlegacy-tsr1_r640s.mov?width=640&height=272" rel="prettyPhoto[movies]">
+                                    <img src="../images/play_cortinillas.png" alt="Otro video sobre algo que va por aquí" />
+                                </a>
+                            </div>
+                        </div>
+                        <div class="video_top_five_image">
+                    		<img src="../images/video3.jpg" alt="Video 3" />
+                        </div>
+                    </div>
+                    <div class="video_top_five_text">
+                        <h3>Audi esta regalando un iPod...</h3>
+                        <ul>
+                            <li><img src="../images/icon_view.png" alt="View" /> 112</li>
+                            <li><img src="../images/icon_points.png" alt="Points" /> 600</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="video_top_five_item">
+                   	<div class="video_top_five_like">
+                    	<a href="#"></a>
+                    </div>
+                	<div class="video_top_five_content" onmouseover="playVideoControl('Top4',true)" onmouseout="playVideoControl('Top4',false)">
+                    	<div class="video_top_five_smoth_container" id="videoTop4">
+                            <div class="video_top_five_smoth"></div>
+                            <div class="video_top_five_smoth_play">
+                                <a href="http://trailers.apple.com/movies/disney/tronlegacy/tronlegacy-tsr1_r640s.mov?width=640&height=272" rel="prettyPhoto[movies]">
+                                    <img src="../images/play_cortinillas.png" alt="Otro video sobre algo que va por aquí" />
+                                </a>
+                            </div>
+                        </div>
+                        <div class="video_top_five_image">
+                    		<img src="images/video4.jpg" alt="Video 4" />
+                        </div>
+                    </div>
+                    <div class="video_top_five_text">
+                        <h3>Gana un viaje a Aspen con...</h3>
+                        <ul>
+                            <li><img src="../images/icon_view.png" alt="View" /> 337</li>
+                            <li><img src="../images/icon_points.png" alt="Points" /> 300</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="video_top_five_item">
+                   	<div class="video_top_five_like">
+                    	<a href="#"></a>
+                    </div>
+                	<div class="video_top_five_content" onmouseover="playVideoControl('Top5',true)" onmouseout="playVideoControl('Top5',false)">
+                    	<div class="video_top_five_smoth_container" id="videoTop5">
+                            <div class="video_top_five_smoth"></div>
+                            <div class="video_top_five_smoth_play">
+                                <a href="http://trailers.apple.com/movies/disney/tronlegacy/tronlegacy-tsr1_r640s.mov?width=640&height=272" rel="prettyPhoto[movies]">
+                                    <img src="../images/play_cortinillas.png" alt="Otro video sobre algo que va por aquí" />
+                                </a>
+                            </div>
+                        </div>
+                        <div class="video_top_five_image">
+                    		<img src="images/video5.jpg" alt="Video 5" />
+                        </div>
+                    </div>
+                    <div class="video_top_five_text">
+                        <h3>Otro video sobre algo que va...</h3>
+                        <ul>
+                            <li><img src="../images/icon_view.png" alt="View" /> 2,696</li>
+                            <li><img src="../images/icon_points.png" alt="Points" /> 1,200</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="video_sugerencias" id="top2">
+            	<div class="video_top_five_item">
+                   	<div class="video_top_five_like">
+                    	<a href="#"></a>
+                    </div>
+                	<div class="video_top_five_content" onmouseover="playVideoControl('Top1',true)" onmouseout="playVideoControl('Top1',false)">
+                    	<div class="video_top_five_smoth_container" id="videoTop1">
+                            <div class="video_top_five_smoth"></div>
+                            <div class="video_top_five_smoth_play">
+                            	<a href="http://trailers.apple.com/movies/disney/tronlegacy/tronlegacy-tsr1_r640s.mov?width=640&height=272" rel="prettyPhoto[movies]">
+                                    <img src="../images/play_cortinillas.png" alt="Otro video sobre algo que va por aquí" />
+                                </a>
+                            </div>
+                        </div>
+                        <div class="video_top_five_image">
+                    		<img src="../images/video1.jpg" alt="Video 1" />
+                        </div>
+                    </div>
+                    <div class="video_top_five_text">
+                        <h3>Daft punk en concierto</h3>
+                        <ul>
+                            <li><img src="../images/icon_view.png" alt="View" /> 54</li>
+                            <li><img src="../images/icon_points.png" alt="Points" /> 500</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="video_top_five_item">
+                   	<div class="video_top_five_like">
+                    	<a href="#"></a>
+                    </div>
+                	<div class="video_top_five_content" onmouseover="playVideoControl('Top2',true)" onmouseout="playVideoControl('Top2',false)">
+                    	<div class="video_top_five_smoth_container" id="videoTop2">
+                            <div class="video_top_five_smoth"></div>
+                            <div class="video_top_five_smoth_play">
+                                <a href="http://trailers.apple.com/movies/disney/tronlegacy/tronlegacy-tsr1_r640s.mov?width=640&height=272" rel="prettyPhoto[movies]">
+                                    <img src="../images/play_cortinillas.png" alt="Otro video sobre algo que va por aquí" />
+                                </a>
+                            </div>
+                        </div>
+                        <div class="video_top_five_image">
+                    		<img src="../images/video2.jpg" alt="Video 2" />
+                        </div>
+                    </div>
+                    <div class="video_top_five_text">
+                        <h3>Festival de Arte Digital</h3>
+                        <ul>
+                            <li><img src="../images/icon_view.png" alt="View" /> 28</li>
+                            <li><img src="../images/icon_points.png" alt="Points" /> 200</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="video_top_five_item">
+                   	<div class="video_top_five_like">
+                    	<a href="#"></a>
+                    </div>
+                	<div class="video_top_five_content" onmouseover="playVideoControl('Top3',true)" onmouseout="playVideoControl('Top3',false)">
+                    	<div class="video_top_five_smoth_container" id="videoTop3">
+                            <div class="video_top_five_smoth"></div>
+                            <div class="video_top_five_smoth_play">
+                                <a href="http://trailers.apple.com/movies/disney/tronlegacy/tronlegacy-tsr1_r640s.mov?width=640&height=272" rel="prettyPhoto[movies]">
+                                    <img src="../images/play_cortinillas.png" alt="Otro video sobre algo que va por aquí" />
+                                </a>
+                            </div>
+                        </div>
+                        <div class="video_top_five_image">
+                    		<img src="../images/video3.jpg" alt="Video 3" />
+                        </div>
+                    </div>
+                    <div class="video_top_five_text">
+                        <h3>Audi esta regalando un iPod...</h3>
+                        <ul>
+                            <li><img src="../images/icon_view.png" alt="View" /> 112</li>
+                            <li><img src="../images/icon_points.png" alt="Points" /> 600</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- END COLUMN RIGHT -->
+    </div>
+
+    <!-- INIT FOOTER -->
+    <div class="footer">
+    	<div class="footer_container">
+        	<div class="footer_left">
+            	<a href="#"><img src="../images/footer_logo.png" alt="Click" /></a>
+                <ul>
+                	<li><a href="#">INICIO</a></li>
+                	<li><a href="#">CONCURSOS</a></li>
+                	<li><a href="#">COMO FUNCIONA</a></li>
+                	<li><a href="#">ACERCA DE</a></li>
+                	<li><a href="#">CONTACTO</a></li>
+                </ul>
+                <ul>
+                	<li><a href="#">Empresa</a></li>
+                	<li><a href="#">Términos y condiciones</a></li>
+                	<li><a href="#">Privacidad</a></li>
+                </ul>
+                <p>©2011 ClickaPuntos.com.mx Todos los derechos reservados</p>
+            </div>
+        	<div class="footer_right">
+            	<div class="footer_right_twitter">
+                    <div class="footer_right_twitter_content">
+                    	<a href="#"><img src="../images/clicka_twitter.png" alt="Twitter" /></a>
+                    </div>
+                	<img src="../images/clicka_social_media.jpg" alt="Clicka Social" />
+                </div>
+            	<div class="footer_right_facebook">
+                    <a href="#"><img src="images/clicka_facebook.png" alt="Facebook" /></a>
+                	Click a Puntos
+                </div>
+                <div class="footer_right_social_media">
+                	<img src="../images/clicka_person_1.jpg" alt="Media" />
+                	<img src="../images/clicka_person_2.jpg" alt="Media" />
+                	<img src="../images/clicka_person_3.jpg" alt="Media" />
+                	<img src="../images/clicka_person_4.jpg" alt="Media" />
+                	<img src="../images/clicka_person_5.jpg" alt="Media" />
+                	<img src="../images/clicka_person_6.jpg" alt="Media" />
+                	<img src="../images/clicka_person_7.jpg" alt="Media" />
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- END FOOTER -->
+    
+    <script type="text/javascript">
+		/* SCRIPT SCROLL SLIDER */
+		$(document).ready(function() {
+			$("#chained").scrollable({circular: true, mousewheel: true}).navigator().autoscroll({
+				interval: 9000
+			});	
+		});
+	
+		/* SCRIPT CHANGE LOOKANDFEEL SELECTBOX */
+		$("#video_filters_select").selectbox().bind('change', function(){
+			$('#default-usage-select')
+				.appendTo('#demo-default-usage .demoTarget')
+				.fadeOut(2000, function(){
+				$(this).remove();
+			});
+		});
+	
+		/* SCRIPT SHOW PLAY CONTROL */
+		function playVideoControl(id,status){
+			videoContainer = document.getElementById("video"+id);
+			if(status == true){
+				videoContainer.style.display = "block";
+			}else{
+				videoContainer.style.display = "none";
+			}
+		}
+		
+		/* SCRIPT SHOW TOP5 AND SUGGESTIONS */
+		function topfiveControl(id){
+			if(id == "top1"){
+				document.getElementById("top1").style.display = "block";
+				document.getElementById("top2").style.display = "none"
+			}else{
+				document.getElementById("top1").style.display = "none"
+				document.getElementById("top2").style.display = "block";
+			}
+		}
+		
+		// SCRIPT VIDEO PLAYER
+		$(document).ready(function(){
+			$("a[rel^='prettyPhoto']").prettyPhoto({
+				animation_speed:'normal',
+				theme:'light_square',
+				slideshow:3000,
+				autoplay_slideshow:false
+			});
+		});
+	</script>
+</body>
+</html>

@@ -1,0 +1,15 @@
+#Mon Nov 05 23:57:26 CST 2012
+eclipse.preferences.version=1
+encoding//src/org/tempuri/WebServOrdersTransactional/ServOrdersTransactional/Cuenta.java=UTF-8
+encoding//src/org/tempuri/WebServOrdersTransactional/ServOrdersTransactional/InputConsulta.java=UTF-8
+encoding//src/org/tempuri/WebServOrdersTransactional/ServOrdersTransactional/InputRecarga.java=UTF-8
+encoding//src/org/tempuri/WebServOrdersTransactional/ServOrdersTransactional/InputReverso.java=UTF-8
+encoding//src/org/tempuri/WebServOrdersTransactional/ServOrdersTransactional/InputSaldo.java=UTF-8
+encoding//src/org/tempuri/WebServOrdersTransactional/ServOrdersTransactional/OutputConsulta.java=UTF-8
+encoding//src/org/tempuri/WebServOrdersTransactional/ServOrdersTransactional/OutputRecarga.java=UTF-8
+encoding//src/org/tempuri/WebServOrdersTransactional/ServOrdersTransactional/OutputReverso.java=UTF-8
+encoding//src/org/tempuri/WebServOrdersTransactional/ServOrdersTransactional/OutputSaldo.java=UTF-8
+encoding//src/org/tempuri/WebServOrdersTransactional/ServOrdersTransactional/Servicetae.java=UTF-8
+encoding//src/org/tempuri/WebServOrdersTransactional/ServOrdersTransactional/ServicetaeLocator.java=UTF-8
+encoding//src/org/tempuri/WebServOrdersTransactional/ServOrdersTransactional/ServicetaeSoap.java=UTF-8
+encoding//src/org/tempuri/WebServOrdersTransactional/ServOrdersTransactional/ServicetaeSoapStub.java=UTF-8

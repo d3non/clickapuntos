@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/WebServOrdersTransactional/ServOrdersTransactional" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" targetNamespace="http://tempuri.org/WebServOrdersTransactional/ServOrdersTransactional" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/WebServOrdersTransactional/ServOrdersTransactional">
+      <s:element name="recarga">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="inputRecarga" type="tns:InputRecarga"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="InputRecarga">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="cuenta" type="tns:Cuenta"/>
+          <s:element minOccurs="0" maxOccurs="1" name="telefono" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="sku" type="s:string"/>
+          <s:element minOccurs="1" maxOccurs="1" name="no_transaccion" type="s:int"/>
+          <s:element minOccurs="0" maxOccurs="1" name="fecha_hora" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="cve_estado" type="s:string"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Cuenta">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="cadena" type="s:int"/>
+          <s:element minOccurs="1" maxOccurs="1" name="establecimiento" type="s:int"/>
+          <s:element minOccurs="1" maxOccurs="1" name="terminal" type="s:int"/>
+          <s:element minOccurs="0" maxOccurs="1" name="cajero" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="clave" type="s:string"/>
+        </s:sequence>
+      </s:complexType>
+      <s:element name="recargaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="recargaResult" type="tns:OutputRecarga"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="OutputRecarga">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="cuenta" type="tns:Cuenta"/>
+          <s:element minOccurs="0" maxOccurs="1" name="telefono" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="sku" type="s:string"/>
+          <s:element minOccurs="1" maxOccurs="1" name="no_transaccion" type="s:int"/>
+          <s:element minOccurs="0" maxOccurs="1" name="fecha_hora" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="fecha_hora_respuesta" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="fecha_hora_solicitud" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="cve_estado" type="s:string"/>
+          <s:element minOccurs="1" maxOccurs="1" name="codigo_respuesta" type="s:int"/>
+          <s:element minOccurs="0" maxOccurs="1" name="descripcion_respuesta" type="s:string"/>
+          <s:element minOccurs="1" maxOccurs="1" name="no_autorizacion" type="s:int"/>
+          <s:element minOccurs="0" maxOccurs="1" name="instruccion1" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="instruccion2" type="s:string"/>
+        </s:sequence>
+      </s:complexType>
+      <s:element name="reverso">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="inputReverso" type="tns:InputReverso"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="InputReverso">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="cuenta" type="tns:Cuenta"/>
+          <s:element minOccurs="0" maxOccurs="1" name="telefono" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="sku" type="s:string"/>
+          <s:element minOccurs="1" maxOccurs="1" name="no_transaccion_recarga" type="s:int"/>
+          <s:element minOccurs="0" maxOccurs="1" name="fecha_hora_recarga" type="s:string"/>
+          <s:element minOccurs="1" maxOccurs="1" name="no_transaccion" type="s:int"/>
+          <s:element minOccurs="1" maxOccurs="1" name="no_autorizacion_recarga" type="s:int"/>
+          <s:element minOccurs="0" maxOccurs="1" name="fecha_hora" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="cve_estado" type="s:string"/>
+        </s:sequence>
+      </s:complexType>
+      <s:element name="reversoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="reversoResult" type="tns:OutputReverso"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="OutputReverso">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="cuenta" type="tns:Cuenta"/>
+          <s:element minOccurs="0" maxOccurs="1" name="telefono" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="sku" type="s:string"/>
+          <s:element minOccurs="1" maxOccurs="1" name="no_transaccion" type="s:int"/>
+          <s:element minOccurs="0" maxOccurs="1" name="fecha_hora" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="fecha_hora_solicitud" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="fecha_hora_respuesta" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="cve_estado" type="s:string"/>
+          <s:element minOccurs="1" maxOccurs="1" name="codigo_respuesta" type="s:int"/>
+          <s:element minOccurs="0" maxOccurs="1" name="descripcion_respuesta" type="s:string"/>
+          <s:element minOccurs="1" maxOccurs="1" name="no_autorizacion" type="s:int"/>
+        </s:sequence>
+      </s:complexType>
+      <s:element name="consulta">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="inputConsulta" type="tns:InputConsulta"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="InputConsulta">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="cuenta" type="tns:Cuenta"/>
+          <s:element minOccurs="0" maxOccurs="1" name="telefono" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="sku" type="s:string"/>
+          <s:element minOccurs="1" maxOccurs="1" name="no_transaccion_recarga" type="s:int"/>
+          <s:element minOccurs="0" maxOccurs="1" name="fecha_hora_recarga" type="s:string"/>
+          <s:element minOccurs="1" maxOccurs="1" name="no_transaccion" type="s:int"/>
+          <s:element minOccurs="0" maxOccurs="1" name="fecha_hora" type="s:string"/>
+        </s:sequence>
+      </s:complexType>
+      <s:element name="consultaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="consultaResult" type="tns:OutputConsulta"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="OutputConsulta">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="cuenta" type="tns:Cuenta"/>
+          <s:element minOccurs="0" maxOccurs="1" name="telefono" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="sku" type="s:string"/>
+          <s:element minOccurs="1" maxOccurs="1" name="no_transaccion" type="s:int"/>
+          <s:element minOccurs="0" maxOccurs="1" name="fecha_hora" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="fecha_hora_respuesta" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="fecha_hora_solicitud" type="s:string"/>
+          <s:element minOccurs="1" maxOccurs="1" name="codigo_respuesta" type="s:int"/>
+          <s:element minOccurs="0" maxOccurs="1" name="descripcion_respuesta" type="s:string"/>
+          <s:element minOccurs="1" maxOccurs="1" name="no_autorizacion" type="s:int"/>
+          <s:element minOccurs="0" maxOccurs="1" name="instruccion1" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="instruccion2" type="s:string"/>
+        </s:sequence>
+      </s:complexType>
+      <s:element name="saldo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="inputSaldo" type="tns:InputSaldo"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="InputSaldo">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="cuenta" type="tns:Cuenta"/>
+          <s:element minOccurs="0" maxOccurs="1" name="fecha_hora" type="s:string"/>
+        </s:sequence>
+      </s:complexType>
+      <s:element name="saldoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="saldoResult" type="tns:OutputSaldo"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="OutputSaldo">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="cuenta" type="tns:Cuenta"/>
+          <s:element minOccurs="0" maxOccurs="1" name="fecha_hora" type="s:string"/>
+          <s:element minOccurs="1" maxOccurs="1" name="codigo_respuesta" type="s:int"/>
+          <s:element minOccurs="0" maxOccurs="1" name="descripcion_respuesta" type="s:string"/>
+          <s:element minOccurs="1" maxOccurs="1" name="saldo" type="s:decimal"/>
+        </s:sequence>
+      </s:complexType>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="recargaSoapIn">
+    <wsdl:part name="parameters" element="tns:recarga"/>
+  </wsdl:message>
+  <wsdl:message name="recargaSoapOut">
+    <wsdl:part name="parameters" element="tns:recargaResponse"/>
+  </wsdl:message>
+  <wsdl:message name="reversoSoapIn">
+    <wsdl:part name="parameters" element="tns:reverso"/>
+  </wsdl:message>
+  <wsdl:message name="reversoSoapOut">
+    <wsdl:part name="parameters" element="tns:reversoResponse"/>
+  </wsdl:message>
+  <wsdl:message name="consultaSoapIn">
+    <wsdl:part name="parameters" element="tns:consulta"/>
+  </wsdl:message>
+  <wsdl:message name="consultaSoapOut">
+    <wsdl:part name="parameters" element="tns:consultaResponse"/>
+  </wsdl:message>
+  <wsdl:message name="saldoSoapIn">
+    <wsdl:part name="parameters" element="tns:saldo"/>
+  </wsdl:message>
+  <wsdl:message name="saldoSoapOut">
+    <wsdl:part name="parameters" element="tns:saldoResponse"/>
+  </wsdl:message>
+  <wsdl:portType name="ServicetaeSoap">
+    <wsdl:operation name="recarga">
+      <wsdl:input message="tns:recargaSoapIn"/>
+      <wsdl:output message="tns:recargaSoapOut"/>
+    </wsdl:operation>
+    <wsdl:operation name="reverso">
+      <wsdl:input message="tns:reversoSoapIn"/>
+      <wsdl:output message="tns:reversoSoapOut"/>
+    </wsdl:operation>
+    <wsdl:operation name="consulta">
+      <wsdl:input message="tns:consultaSoapIn"/>
+      <wsdl:output message="tns:consultaSoapOut"/>
+    </wsdl:operation>
+    <wsdl:operation name="saldo">
+      <wsdl:input message="tns:saldoSoapIn"/>
+      <wsdl:output message="tns:saldoSoapOut"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ServicetaeSoap" type="tns:ServicetaeSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="recarga">
+      <soap:operation soapAction="http://tempuri.org/WebServOrdersTransactional/ServOrdersTransactional/recarga" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="reverso">
+      <soap:operation soapAction="http://tempuri.org/WebServOrdersTransactional/ServOrdersTransactional/reverso" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="consulta">
+      <soap:operation soapAction="http://tempuri.org/WebServOrdersTransactional/ServOrdersTransactional/consulta" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="saldo">
+      <soap:operation soapAction="http://tempuri.org/WebServOrdersTransactional/ServOrdersTransactional/saldo" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ServicetaeSoap12" type="tns:ServicetaeSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="recarga">
+      <soap12:operation soapAction="http://tempuri.org/WebServOrdersTransactional/ServOrdersTransactional/recarga" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="reverso">
+      <soap12:operation soapAction="http://tempuri.org/WebServOrdersTransactional/ServOrdersTransactional/reverso" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="consulta">
+      <soap12:operation soapAction="http://tempuri.org/WebServOrdersTransactional/ServOrdersTransactional/consulta" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="saldo">
+      <soap12:operation soapAction="http://tempuri.org/WebServOrdersTransactional/ServOrdersTransactional/saldo" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Servicetae">
+    <wsdl:port name="ServicetaeSoap" binding="tns:ServicetaeSoap">
+      <soap:address location="http://201.144.219.232/MTCenter.WS.TAE/Servicetae.asmx"/>
+    </wsdl:port>
+    <wsdl:port name="ServicetaeSoap12" binding="tns:ServicetaeSoap12">
+      <soap12:address location="http://201.144.219.232/MTCenter.WS.TAE/Servicetae.asmx"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

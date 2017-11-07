@@ -1,0 +1,102 @@
+.perfil_user_content{width:1010px;} 
+.perfil_user_content_left{width:650px;float:left;}
+.perfil_user_content_rigth{width:330px;float:left;height:500px;}
+.perfil_user_content_izq_page{width:620x;}
+.perfil_user_content_izq_foto{width:620px;align:center;height:70px;border-bottom-width: 1px ;border-bottom-style: solid; border-bottom-color: #cccccc;}
+.perfil_user_content_izq_foto_foto{width:60px;height:60px;background:url(../images/perfilUser/userfoto.png) no-repeat; float:left; margin:2px;}
+.perfil_user_content_izq_foto_upload{width:540px;float:right;height:65px;}
+.perfil_user_content_izq_page_sube{width:500px;height:25px;}
+.perfil_user_content_izq_page_sube span{font-size:14px;font-weight:bold;color:#7991A5;}
+.perfil_user_content_izq_foto_cambios{width:500px;height:40px;}
+.perfil_user_content_izq_form{width:600px;}
+.comboboxContainer { border:none; background: url(../images/perfilUser/combo.png)  no-repeat;width:115px;height:30px}
+.comboboxValueContainer { background: none;}
+.comboboxValueContent { padding-left: 3px; color:#555555; font-size:12px; font-weight:bold;font-family:Verdana, Geneva, sans-serif;}
+.comboboxDropDownContainer { border-right: solid 1px #000; border-bottom: solid 1px #000; border-left: solid 1px #aaa; border-top: solid 1px #aaa; background: #fff; overflow: hidden; padding-left: 3px; cursor: default;}
+.comboboxDropDownContainer2 {height:180px;width:50px;overflow-x: hidden;overflow-y: auto;border-right: solid 1px #000; border-bottom: solid 1px #000; border-left: solid 1px #aaa; border-top: solid 1px #aaa; background: #fff; padding-left: 3px; cursor: default;}
+.comboboxDropDownButton { width: 25px; height: 29px; background-image: url(../images/perfilUser/escogecombo.png); }
+.comboboxGroupItemHeader { display: block; background: #000; color: #fff; }
+.comboboxGroupItemContainer { padding-left: 10px;}
+.comboboxItem { background: #fff; color:#666666; font-size:12px; font-family:Verdana, Geneva, sans-serif; }
+.comboboxItemHover { background-color: #999; color: #fff;  padding-left: 4px; }
+.perfil_user_content_izq_form_left{width:320px;float:left;border:1px solid color #000000;}
+.perfil_user_content_line{border-bottom-width: 1px ;border-bottom-style: solid; border-bottom-color: #cccccc;}
+.perfil_user_content_izq_form_campofotro {width:310px;height:30px;background:url(../images/perfilUser/campo.png) no-repeat; float:left;align:center;padding:3px 6px 6px 6px;}
+.perfil_user_content_izq_form_campofotro input{text-transform:uppercase;width:280px;height:25px;border:none;background:none;color:#666666; font-size:12px;font-weight:bold; font-family:Verdana, Geneva, sans-serif;}
+.perfil_user_content_izq_form_campof {width:310px;height:30px;background:url(../images/perfilUser/campo.png) no-repeat; float:left;align:center;padding:3px 6px 6px 6px;}
+.perfil_user_content_izq_form_campof input{width:280px;height:25px;border:none;background:none;color:#666666; font-size:12px;font-weight:bold; font-family:Verdana, Geneva, sans-serif;}
+.perfil_user_content_izq_form_campof span{color:#666666; font-size:12px;font-weight:bold; font-family:Verdana, Geneva, sans-serif;}
+.perfil_user_content_izq_botones {width:340px;}
+.perfil_user_content_izq_form_otros_left_campo1 {font-size:14px;font-weight:bold;color:#666688;}
+.perfil_user_content_izq_form_otros_left_campo3 a{font-size:14px;color:#52B7EA;}
+.perfil_user_content_izq_form_otros_left_campo1 a{align:center;font-size:14px;font-weight:bold;color:#53B7EA;}
+.perfil_user_content_izq_form_otros_left_campof1 {width:150px;height:30px;background:url(../images/perfilUser/combo.png) no-repeat;}
+.perfil_user_content_izq_form_otros_left_campof1 input{width:130px;height:25px;border:none;background:none;color:#666666; font-size:12px; font-weight:bold;font-family:Verdana, Geneva, sans-serif;padding:3px 6px 6px 6px;}
+.perfil_user_content_izq_form_right {width:350px;float:right;padding:10px;}
+.perfil_user_content_izq_share {width:650px;height:180px;background:url(../images/perfilUser/invita_amigos.png) no-repeat; float:left;}
+.perfil_user_content_izq_share_n1 {width:650px;height:80px;}
+.perfil_user_content_izq_share_n2 {width:650px;}
+.perfil_user_content_izq_share_h{width:320px;height:35px;float:left;}
+.perfil_user_content_izq_share_y{width:320px;height:35px;float:left;}
+.perfil_user_content_izq_form_select{width:150px;height:30px;background:url(../images/perfilUser/combo.png) no-repeat;}
+.perfil_user_content_izq_form_campof3 {width:380px;height:30px;background:url(../images/perfilUser/campo.png) no-repeat; float:left;align:center;padding:3px 6px 6px 6px;}
+.perfil_user_content_izq_form_campof3 input{width:375px;height:25px;border:none;background:none;color:#666666; font-size:12px; font-family:Verdana, Geneva, sans-serif;}
+.modal_tittle{background-color:#e8e8e8;height:27px;width:500px;vertical-align:middle;}
+.modal_tittle_s {width:400px;padding-top:5px;background-color:#e8e8e8;}
+.modal_tittle_s span{font-size:14px;font-weight:bold;color:#435265;}
+.modal_content{margin:5px;}
+.modal_content_monetarios{margin:5px;height:180px}
+.modal{width:428px;overflow:hidden;}
+.modalF_tittle{background-color:#e8e8e8;height:27px;width:600px;vertical-align:middle;}
+.modalF_tittle_s {width:500px;padding-top:5px;background-color:#e8e8e8;}
+.modalF_tittle_s span{font-size:14px;font-weight:bold;color:#435265;}
+.modalF_content{margin:5px;}
+.modalF{width:528px;overflow:hidden;}
+.modalL_tittle{background-color:#e8e8e8;height:27px;width:620px;vertical-align:middle;}
+.modalL_tittle_s {width:620px;padding-top:5px;background-color:#e8e8e8;}
+.modalL_tittle_s span{font-size:14px;font-weight:bold;color:#435265;}
+.modalL_content{margin:5px;}
+.modalL{width:620px;overflow:hidden;}
+.perfil_user_content_izq_canje{width:620px;align:center;height:30px;border-bottom-width: 1px ;border-bottom-style: solid; border-bottom-color: #cccccc;}
+.perfil_user_content_izq_tipo_canje{width:620px;align:center;height:120px;border-bottom-width: 1px ;border-bottom-style: solid; border-bottom-color: #cccccc;}
+.perfil_user_content_izq_canje_imagen{width:16px;height:30px;background:url(../images/centro_c/tienes.png) no-repeat;float:left;}
+.perfil_user_content_izq_canje_imagen2{width:16px;height:16px;background:url(../images/sprite_clickapuntos.png) -526px -346px no-repeat;float:left;}
+.perfil_user_content_izq_premios{width:620px;overflow:hidden;}
+.perfil_user_content_izq_premios_content{width:300px;float:left;padding:5px;height:320px;position:relative;}
+.perfil_user_content_izq_premios_content_top{width:300px;}
+.perfil_user_content_izq_premios_content_top_cliente{width:60px;height:45px;float:left;}
+.perfil_user_content_izq_premios_content_top_descripcion {width:225px;float:right;height:45px;padding:0px 0px 10px;}
+.perfil_user_content_izq_premios_content_top_descripcion span{font-size:14px;font-weight:bold;color:#7991A5;}
+.perfil_user_content_izq_premios_content_top_descripcion p{font-size:10px;color:#7991f5;font-weight:bold;}
+.perfil_user_content_izq_premios_content_down{width:300px;height:240px;}
+.canjea_puntos{width:77px;height:30px;top:270px;left:222px;position:absolute;}
+.canjea_premios_recargas {width:300px;float:left;height:95px;margin-left:4px;margin-top:4px;background:url(../images/recargas.png)  no-repeat;}
+.canjea_premios_recargas:hover {background:url(../images/recargas.png)  no-repeat;cursor:pointer;}
+.canjea_premios_itunes {width:300px;float:left;height:95px;margin-left:4px;margin-top:4px;background:url(../images/iTunes.png)  no-repeat;}
+.canjea_premios_itunes:hover {background:url(../images/iTunes.png)  no-repeat;cursor:pointer;}
+.content_premio_imagen{width:300px;height:240px;}
+.content_premio_contenido{width:300px;height:65px;padding:10px 10px 10px 5px;}
+.content_premio_contenido p{font-size:14px;font-weight:bold;color:#7991A5;}
+.content_premio_contenido span{font-size:14px;font-weight:bold;color:#52B7EA;}
+.content_premio_contenido a{font-size:14px;font-weight:bold;color:#52B7EA;}
+.reeenviar_mensaje_canje{font-size:14px;font-weight:bold;color:#52B7EA;}
+.content_premio_aceptar{width:300px;height:40px;}
+.content_premio_aceptar_izq{width:140px;height:40px;float:left;}
+.content_premio_aceptar_izq span{font-size:12px;font-weight:bold;color:#7991A5;}
+.content_premio_aceptar_der{width:160px;height:40px;float:right;}
+.modal2{width:315px;overflow:hidden;}
+.modal2_tittle{background-color:#e8e8e8;height:27px;width:332px;vertical-align:middle;}
+.modal2_tittle_s {width:290px;padding-top:5px;background-color:#e8e8e8;}
+.modal2_tittle_s span{font-size:14px;font-weight:bold;color:#435265;}
+.logueo_paginas{padding:10px;width:380px;border-bottom-width: 1px ;border-bottom-style: solid; border-bottom-color: #cccccc;}
+.logueo_paginas span{font-size:12px;font-weight:bold;color:#7991A5;}
+.comboboxContainer2 { border:none; background: url(../images/perfilUser/campo.png)  no-repeat;width:380px;height:30px}
+.comboboxValueContainer2 { background: none;}
+.comboboxValueContent2 { padding-left: 3px; color:#555555; font-size:12px; font-weight:bold;font-family:Verdana, Geneva, sans-serif;}
+.comboboxDropDownContainer21 { border-right: solid 1px #000; border-bottom: solid 1px #000; border-left: solid 1px #aaa; border-top: solid 1px #aaa; background: #fff; overflow: hidden; padding-left: 3px; cursor: default;}
+.comboboxDropDownContainer22 {height:100px;width:50px;overflow-x: hidden;overflow-y: auto;border-right: solid 1px #000; border-bottom: solid 1px #000; border-left: solid 1px #aaa; border-top: solid 1px #aaa; background: #fff; padding-left: 3px; cursor: default;}
+.comboboxDropDownButton2 { width: 25px; height: 29px; background-image: url(../images/perfilUser/escogecombo.png); }
+.comboboxGroupItemHeader2 { display: block; background: #000; color: #fff; }
+.comboboxGroupItemContainer2 { padding-left: 10px;}
+.comboboxItem2 { background: #fff; color:#666666; font-size:12px; font-family:Verdana, Geneva, sans-serif; }
+.comboboxItemHover2 { background-color: #999; color: #fff;  padding-left: 4px; }

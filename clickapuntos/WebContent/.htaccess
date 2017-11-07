@@ -1,0 +1,3 @@
+RewriteCond %{REQUEST_fileNAME} !-d
+RewriteCond %{REQUEST_fileNAME} !-f
+rewriterule ^(([^/]+/)*[^./]+)$ /$1.htm [L]

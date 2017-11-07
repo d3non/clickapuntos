@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+		http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+		http://www.springframework.org/schema/aop
+		http://www.springframework.org/schema/aop/spring-aop-3.0.xsd
+		http://www.springframework.org/schema/tx
+		http://www.springframework.org/schema/tx/spring-tx-3.0.xsd
+		http://www.springframework.org/schema/context 
+		http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+	<context:annotation-config/>
+	
+	<bean id="transactionManager" class="org.springframework.orm.hibernate3.HibernateTransactionManager">
+		<property name="sessionFactory" ref="sessionFactory"/>
+	</bean>
+		
+	<context:component-scan base-package="mx.com.clickapuntos.service.impl"/>
+	
+	<tx:advice id="txAdvice" transaction-manager="transactionManager">
+		<tx:attributes>
+			<tx:method name="create" />
+			<tx:method name="update" />
+			<tx:method name="delete" />
+			<tx:method name="find" read-only="true" />			
+			<!-- <tx:method name="*" propagation="SUPPORTS" read-only="true"/> -->
+		</tx:attributes>
+	</tx:advice>
+	
+	<aop:config>
+    	<aop:advisor pointcut="execution(* mx.com.clickapuntos.dao.impl*.*(..))" 
+    		advice-ref="txAdvice" />	
+	</aop:config>
+
+	<bean id="dataSource"
+		class="org.apache.commons.dbcp.BasicDataSource">
+		<property name="driverClassName"
+			value="org.gjt.mm.mysql.Driver">
+		</property>
+		<property name="url"
+			value="jdbc:mysql://23.254.133.86:3306/clickapuntos?autoReconnect=true">
+		</property>
+		<property name="username" value="root"></property>
+	  	<property name="password" value="@Jl9613711"></property>		
+	</bean>
+	
+	<bean id="sessionFactory"
+		class="org.springframework.orm.hibernate3.annotation.AnnotationSessionFactoryBean">
+		<property name="dataSource" ref="dataSource" />
+		<property name="hibernateProperties">
+			<props>
+				<prop key="hibernate.dialect">org.hibernate.dialect.MySQLDialect</prop>	
+				<prop key="hibernate.show_sql">true</prop>
+				<prop key="hibernate.query.factory_class">
+					org.hibernate.hql.classic.ClassicQueryTranslatorFactory
+				</prop>
+				<prop key="hibernate.c3p0.min_size">5</prop>
+				<prop key="hibernate.c3p0.max_size">20</prop>
+				<prop key="hibernate.c3p0.timeout">3000</prop>
+				<prop key="hibernate.c3p0.max_statements">50</prop>
+				<prop key="hibernate.c3p0.acquire_increment">1</prop>
+				<prop key="hibernate.c3p0.idle_test_period">14400</prop>
+				<prop key="hibernate.c3p0.timeout">25200</prop>				
+				<prop key="hibernate.c3p0.max_statements">0</prop>
+				<prop key="hibernate.c3p0.preferredTestQuery">select 1;</prop>
+				<prop key="hibernate.c3p0.testConnectionOnCheckout">true</prop>
+				<prop key="hibernate.c3p0.acquireRetryAttempts">3</prop>
+			</props>
+		</property>
+		<property name="annotatedClasses">
+			<list>
+				<value>mx.com.clickapuntos.persistence.Usuariotipo</value>
+				<value>mx.com.clickapuntos.persistence.Clientesdirecciones</value>
+				<value>mx.com.clickapuntos.persistence.Mediapropiedades</value>
+				<value>mx.com.clickapuntos.persistence.Promotipocobro</value>
+				<value>mx.com.clickapuntos.persistence.Media</value>
+				<value>mx.com.clickapuntos.persistence.Mediaclasificacion</value>
+				<value>mx.com.clickapuntos.persistence.Mediausuario</value>
+				<value>mx.com.clickapuntos.persistence.Promotipomecanica</value>
+				<value>mx.com.clickapuntos.persistence.Usuarioprefencias</value>
+				<value>mx.com.clickapuntos.persistence.Usuariosdirecciones</value>
+				<value>mx.com.clickapuntos.persistence.Usuarios</value>
+				<value>mx.com.clickapuntos.persistence.Mediatipo</value>
+				<value>mx.com.clickapuntos.persistence.Usuarioproperties</value>
+				<value>mx.com.clickapuntos.persistence.Mediapromo</value>
+				<value>mx.com.clickapuntos.persistence.Clientes</value>
+				<value>mx.com.clickapuntos.persistence.Comentarios</value>
+				<value>mx.com.clickapuntos.persistence.Promos</value>
+				<value>mx.com.clickapuntos.persistence.Usuariosdatos</value>
+				<value>mx.com.clickapuntos.persistence.Premios</value>
+				<value>mx.com.clickapuntos.persistence.Premiotipo</value>
+				<value>mx.com.clickapuntos.persistence.PuntosUsr</value>
+				<value>mx.com.clickapuntos.persistence.Puntos</value>
+				<value>mx.com.clickapuntos.persistence.Pagos</value>
+				<value>mx.com.clickapuntos.persistence.DetallePuntos</value>
+				<value>mx.com.clickapuntos.persistence.DetallePromo</value>
+				<value>mx.com.clickapuntos.persistence.TipoCambioPuntosPesos</value>
+				<value>mx.com.clickapuntos.persistence.TipoPago</value>
+				<value>mx.com.clickapuntos.persistence.Autentificacion</value>
+				<value>mx.com.clickapuntos.persistence.EmailConfirmacion</value>
+				<value>mx.com.clickapuntos.persistence.TipoMensaje</value>
+				<value>mx.com.clickapuntos.persistence.MensajeUsuarios</value>
+				<value>mx.com.clickapuntos.persistence.PuntosUsuarios</value>
+				<value>mx.com.clickapuntos.persistence.PuntosUsuarioPremio</value>
+				<value>mx.com.clickapuntos.persistence.TarjetasPremios</value>
+				<value>mx.com.clickapuntos.persistence.ParametrosVigencias</value>
+				<value>mx.com.clickapuntos.persistence.CompaniaCelular</value>
+				<value>mx.com.clickapuntos.persistence.RutasImagenes</value>
+			</list>
+		</property>
+	</bean>
+	
+	<bean id="managerTemplate" abstract="true">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory"/>
+		</property>
+	</bean>
+	
+	<bean id="mediaUsuarioDAO" class="mx.com.clickapuntos.dao.impl.GenericDAO" parent="managerTemplate">
+		<constructor-arg>
+			<value>
+					mx.com.clickapuntos.persistence.Mediausuario
+				</value>	
+		</constructor-arg>		
+	</bean>
+	
+	<bean id="promosDAO" class="mx.com.clickapuntos.dao.impl.GenericDAO" parent="managerTemplate">
+		<constructor-arg>
+			<value>
+					mx.com.clickapuntos.persistence.Promos
+				</value>	
+		</constructor-arg>		
+	</bean>
+	
+	<bean id="mediaPropDAO" class="mx.com.clickapuntos.dao.impl.GenericDAO" parent="managerTemplate">
+		<constructor-arg>
+			<value>
+					mx.com.clickapuntos.persistence.Mediapropiedades
+				</value>	
+		</constructor-arg>		
+	</bean>
+
+
+	<bean id="premiosDAO" class="mx.com.clickapuntos.dao.impl.GenericDAO" parent="managerTemplate">
+		<constructor-arg>
+			<value>
+					mx.com.clickapuntos.persistence.Premios
+				</value>	
+		</constructor-arg>		
+	</bean>
+	<bean id="usuariotipoDAO" class="mx.com.clickapuntos.dao.impl.GenericDAO" parent="managerTemplate">
+		<constructor-arg>
+			<value>
+					mx.com.clickapuntos.persistence.Usuariotipo
+				</value>	
+		</constructor-arg>		
+	</bean>
+	<bean id="comentariosDAO" class="mx.com.clickapuntos.dao.impl.ComentariosDAO">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	<bean id="emailConfirmacionDAO" class="mx.com.clickapuntos.dao.impl.EmailConfirmacionDAO">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	<bean id="usuariosDatosDAO" class="mx.com.clickapuntos.dao.impl.UsuariosdatosDAO">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	
+	<bean id="usuariosDireccionesDAO" class="mx.com.clickapuntos.dao.impl.UsuariosdireccionesDAO">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	<bean id="parametrosVigenciasDAO" class="mx.com.clickapuntos.dao.impl.ParametrosVigenciaDAO">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	
+	<bean id="genericUsuarioDAO" class="mx.com.clickapuntos.dao.impl.UsuariosDAO">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	
+    <bean id="promotipomecanicaDAO" class="mx.com.clickapuntos.dao.impl.GenericDAO" parent="managerTemplate">
+		<constructor-arg>
+			<value>
+					mx.com.clickapuntos.persistence.Promotipomecanica
+				</value>	
+		</constructor-arg>		
+	</bean>
+	
+	<bean id="mediaDAO" class="mx.com.clickapuntos.dao.impl.GenericDAO" parent="managerTemplate">
+		<constructor-arg>
+			<value>
+					mx.com.clickapuntos.persistence.Media
+				</value>	
+		</constructor-arg>		
+	</bean>
+	<bean id="mediaPromoDAO" class="mx.com.clickapuntos.dao.impl.GenericDAO" parent="managerTemplate">
+		<constructor-arg>
+			<value>
+					mx.com.clickapuntos.persistence.Mediapromo
+				</value>	
+		</constructor-arg>		
+	</bean>
+	<bean id="puntosUsrDAO" class="mx.com.clickapuntos.dao.impl.PuntosUsrDAO">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	<bean id="puntosDAO" class="mx.com.clickapuntos.dao.impl.PuntosDAO">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	<bean id="autentificacionDAO" class="mx.com.clickapuntos.dao.impl.AutentificacionDAO">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	<bean id="mensajeUsuariosDAO" class="mx.com.clickapuntos.dao.impl.MensajeUsuariosDAO">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	<bean id="puntosUsuarioPremioDAO" class="mx.com.clickapuntos.dao.impl.PuntosUsuarioPremioDAO">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	<bean id="TarjetasPremiosDAO" class="mx.com.clickapuntos.dao.impl.TarjetasPremiosDAO">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	<bean id="puntosUsuariosDAO" class="mx.com.clickapuntos.dao.impl.PuntosUsuariosDAO">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	<bean id="companiaCelularDAO" class="mx.com.clickapuntos.dao.impl.CompaniaCelularDAO">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	<bean id="rutaImagenesDA0" class="mx.com.clickapuntos.dao.impl.RutaImagenesDAO">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	<bean id="jdbcUserService" class="org.springframework.security.provisioning.JdbcUserDetailsManager">
+    	<property name="dataSource" ref="dataSource" />
+    	<property name="authenticationManager" ref="authenticationManager" />
+</bean>
+</beans>
